@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Elemento radice -->
+  <xs:element name="documentazioni">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="documentazione" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="linguaggio" type="xs:string"/>
+              <xs:element name="versione" type="xs:string" minOccurs="0"/>
+              <xs:element name="autore" type="xs:string" minOccurs="0"/>
+              <xs:element name="contenuti">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="contenuto" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="categoria" type="xs:string"/>
+                          <xs:element name="spiegazione" type="xs:string"/>
+                          <xs:element name="esempi">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="esempio" minOccurs="1" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="codice" type="xs:string"/>
+                                      <xs:element name="output" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="nome" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="titolo" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

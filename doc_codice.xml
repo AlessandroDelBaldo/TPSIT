@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentazioni>
+  <documentazione id="doc_py" titolo="Guida Python Base">
+    <linguaggio>Python</linguaggio>
+    <versione>3.11</versione>
+    <autore>Mario Rossi</autore>
+    <contenuti>
+      <contenuto nome="Selezione">
+        <categoria>selezione</categoria>
+        <spiegazione>Le strutture di selezione (if, elif, else) permettono di eseguire codice diverso in base a condizioni.</spiegazione>
+        <esempi>
+          <esempio>
+            <codice>
+                voto = 75
+
+                if voto >= 90:
+                    giudizio = "Ottimo"
+                elif voto >= 70:
+                    giudizio = "Buono"
+                elif voto >= 60:
+                    giudizio = "Sufficiente"
+                else:
+                    giudizio = "Insufficiente"
+
+                print(f"Voto {voto}: {giudizio}")
+            </codice>
+            <output>Voto 75: Buono</output>
+          </esempio>
+        </esempi>
+      </contenuto>
+      <contenuto nome="Ricorsione">
+        <categoria>ricorsione</categoria>
+        <spiegazione>Una funzione ricorsiva chiama se stessa. Serve un caso base per fermare la ricorsione, altrimenti continua all'infinito.</spiegazione>
+        <esempi>
+          <esempio>
+            <codice>
+                def fattoriale(n):
+                    if n == 0 or n == 1:
+                        return 1
+                    else:
+                        return n * fattoriale(n - 1)
+                            
+                risultato = fattoriale(5)
+                print(f"5! = {risultato}")
+                print(f"4! = {fattoriale(4)}")
+            </codice>
+            <output>
+                5! = 120
+                4! = 24
+            </output>
+          </esempio>
+        </esempi>
+      </contenuto>
+
+    </contenuti>
+  </documentazione>
+
+</documentazioni>
