@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubrica>
+  <studenti>
+    <studente id="1">
+      <nome>Mario Bianchi</nome>
+      <voto_pratico>7.5</voto_pratico>
+      <voto_teorico>8.0</voto_teorico>
+      <media>7.75</media>
+      <insufficiente>no</insufficiente>
+      <commento>Ottima preparazione sia pratica che teorica. Studente molto diligente.</commento>
+    </studente>
+    
+    <studente id="2">
+      <nome>Laura Verdi</nome>
+      <voto_pratico>5.0</voto_pratico>
+      <voto_teorico>5.5</voto_teorico>
+      <media>5.25</media>
+      <insufficiente>sì</insufficiente>
+      <commento>Preparazione insufficiente. Necessita di maggiore studio e pratica.</commento>
+    </studente>
+  </studenti>
+</rubrica>

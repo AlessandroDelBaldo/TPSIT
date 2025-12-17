@@ -1,0 +1,15 @@
+rubrica:
+  studenti:
+    - nome: "Matteo Matto"
+      voto_pratico: 7.5
+      voto_teorico: 8.0
+      media: 7.75
+      insufficiente: "no"
+      commento: "Ottima preparazione sia pratica che teorica. Studente molto diligente."
+    
+    - nome: "Mario Rossi"
+      voto_pratico: 5.0
+      voto_teorico: 5.5
+      media: 5.25
+      insufficiente: "sì"
+      commento: "Preparazione insufficiente. Necessita di maggiore studio e pratica."
