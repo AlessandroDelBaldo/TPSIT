@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Biblioteca</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; max-width: 1000px; }
+    th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+    th { background: #eee; }
+    caption { font-weight: 700; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Biblioteca - Elenco libri</h1>
+  <div id="content">Caricamento...</div>
+  <p><a href="form_delbaldo.html">Aggiungi nuovo libro</a></p>
+
+  <script>
+    (async function() {
+      try {
+        const r = await fetch('/books');
+        const data = await r.json();
+        const books = data.books || [];
+        const container = document.getElementById('content');
+        if (!books.length) {
+          container.textContent = 'Nessun libro in biblioteca.';
+          return;
+        }
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        thead.innerHTML = '<tr><th>#</th><th>Titolo</th><th>Autore</th><th>Edizione</th><th>Casa editrice</th><th>Genere</th><th>Proprietario</th></tr>';
+        table.appendChild(thead);
+        const tbody = document.createElement('tbody');
+        books.forEach((b, i) => {
+          const tr = document.createElement('tr');
+          const owner = ((b.nome_proprietario||'') + ' ' + (b.cognome_proprietario||'')).trim();
+          tr.innerHTML = `<td>${i+1}</td>
+            <td>${escapeHtml(b.titolo||'')}</td>
+            <td>${escapeHtml(b.autore||'')}</td>
+            <td>${escapeHtml(b.edizione||'')}</td>
+            <td>${escapeHtml(b.casa_editrice||'')}</td>
+            <td>${escapeHtml(b.genere||'')}</td>
+            <td>${escapeHtml(owner)}</td>`;
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        container.innerHTML = '';
+        container.appendChild(table);
+      } catch (e) {
+        document.getElementById('content').textContent = 'Errore nel caricamento.';
+      }
+
+      function escapeHtml(str) {
+        return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+      }
+    })();
+  </script>
+</body>
+</html>

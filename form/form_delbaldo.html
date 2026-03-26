@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <TITLE>La mia prima pagina</title>
+        <meta name="description" content="questa è la mia prima pagina, spero che non ci siano troppi errori!">
+        <style>
+            input, select {
+                display: block;
+                margin: 10px 0 20px 0;
+                width: 200px;
+                height: 30px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                transition: border-color 0.2s;
+                outline: none; /* rimuove l'outline di default */
+            }
+
+            /* rosso chiaro quando viene cliccato (ma non se ha focus) */
+            input.clicked:not(:focus), select.clicked:not(:focus) {
+                border-color: lightcoral !important;
+            }
+
+            /* rosso scuro quando l'elemento ha il focus */
+            input:focus, select:focus {
+                border-color: darkred !important;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Biblioteca</h1>
+        <div>
+        questa è una sezione
+        </div>
+        <p>questa è un paragrafo</p><p>questo è un altro paragrafo</p>
+        
+        <!-- creazione della form -->
+        <form class="form" id="form1" method="POST" onsubmit="salva_dati(event)">
+            <input name="nome" type="text" placeholder="inserisci qui il tuo nome"/>
+            <input name="cognome" type="text" placeholder="inserisci qui il tuo cognome"/>
+            <input name="titolo_libro" type="text" placeholder="inserisci qui il titolo del libro">
+            <input name="autore_libro" type="text" placeholder="inserisci qui l'autore del libro">
+            <input name="casa_editrice_libro" type="text" placeholder="inserisci qui la casa editrice">
+            <select name="genere">
+                <option value="narrativa">narrativa</option>
+                <option value="fantasy">libro di fantasy</option>
+                <option value="giallo">giallo</option>
+            </select>
+            <input type="submit" value="INVIA"/>
+        </form>
+    </BODY>
+
+    <script>
+        // Funzione per aggiungere eventi agli elementi della form
+        document.addEventListener("DOMContentLoaded", function() {
+            const formElements = document.querySelectorAll("#form1 input[type='text'], #form1 select");
+
+            formElements.forEach(element => {
+                // usa pointer events per coprire mouse e touch
+                element.addEventListener("pointerdown", function() {
+                    this.classList.add("clicked");
+                });
+
+                // rimuovi la classe quando il puntatore viene rilasciato o esce dall'elemento
+                element.addEventListener("pointerup", function() {
+                    this.classList.remove("clicked");
+                });
+                element.addEventListener("pointerleave", function() {
+                    this.classList.remove("clicked");
+                });
+
+                // quando perde il focus rimuovi la classe clicked
+                element.addEventListener("blur", function() {
+                    this.classList.remove("clicked");
+                });
+
+                // il focus è gestito via CSS (:focus) per diventare darkred
+            });
+        });
+
+        function salva_dati(event) {
+            event.preventDefault(); // evita il submit reale per poter vedere gli effetti
+            var form = document.getElementById("form1");
+            var data = new FormData(form);
+
+            var json = {"books":[]};
+            var book = {
+                "libro": data.get("titolo_libro"),
+                "autore": data.get("autore_libro"),
+                "casa_editrice": data.get("casa_editrice_libro"),
+                "genere": data.get("genere")
+            };
+            json.books.push(book);
+            
+            var stringa_json = JSON.stringify(json);
+            console.log(stringa_json);
+        }
+    </script>
+</html>
