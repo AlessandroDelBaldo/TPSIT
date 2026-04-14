@@ -1,0 +1,64 @@
+
+1 di 2.321
+gay
+Posta in arrivo
+Cristian Monticelli
+Allegati
+15:42 (2 ore fa)
+a me
+
+Fai attenzione a questo messaggio.
+Questo messaggio contiene uno o più allegati che Gmail non può verificare e che potrebbero essere dannosi. Non scaricare gli allegati, a meno che non ritieni attendibili il mittente e il messaggio.
+
+Segnala come spamSembra sicuro
+Sembra che questo messaggio sia in inglese
+
+ 5 allegati
+  •  Scansionato da Gmail
+Il download degli allegati è stato disabilitato. Se ritieni che il messaggio sia attendibile e vuoi scaricare gli allegati, fai clic su "Sembra sicuro" nel banner in alto.
+<!doctype html>
+<html lang="it">
+<head>
+    <title>AJAX esercizio 1</title>
+</head>
+<body>
+    <font color="blue" size="4"><strong>
+        Html caricamento dinamico
+    </strong></font><br/>
+    <hr/>
+
+    <div>
+        <button>documento1</button>
+        <button>documento2</button>
+        <button>documento3</button>
+        <button>documento4</button>
+    </div>
+    <hr/>
+    <div id="zonaDinamica">
+        <em>qui viene caricato il doc</em>
+    </div>
+    <hr/>
+    <font color="blue" size="3">parte inferiore</font><br/>
+<script>
+    var documenti = document.getElementsByTagName("button");
+    for(var i = 0; i < documenti.length; i++) {
+        documenti[i].onclick = caricaDocumento;
+    }
+    function caricaDocumento(e) {
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = gestisciResponse;
+        httpRequest.open("GET", e.target.innerHTML + ".html", true);
+        httpRequest.send();
+    }
+    function gestisciResponse(e) {
+        if (e.target.readyState === XMLHttpRequest.DONE) {
+            if (e.target.status === 200) {
+                document.getElementById("zonaDinamica").innerHTML = e.target.responseText;
+            } else {
+                document.getElementById("zonaDinamica").innerHTML = "Errore caricamento: " + e.target.status;
+            }
+        }
+    }
+</script>
+</body>
+</html>
