@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Provincia {{ prov }}{% endblock %}
+{% block content %}
+<h1>Provincia {{ prov }} ({{ count }} comuni)</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Slug</th>
+            <th>Lat/Lng</th>
+            <th>Cap?</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}, {{ row[4] }}</td>
+            <td>{{ 'Sì' if row[8] else 'No' }}</td>
+            <td><a href="/map/{{ row[0] }}" class="btn btn-sm btn-info">Mappa</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p><small>Mostrando primi 50. <a href="/search?q={{ prov }}">Cerca tutti</a></small></p>
+<a href="/" class="btn btn-primary">Home</a>
+{% endblock %}

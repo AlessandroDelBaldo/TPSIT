@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Mappa{% endblock %}
+{% block content %}
+<h1>Mappa</h1>
+<div id="map" style="height: 500px;"></div>
+<script>
+fetch('/api/comune/{{ comune_id }}')
+    .then(r => r.json())
+    .then(data => {
+        const map = L.map('map').setView([data.lat, data.lng], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        L.marker([data.lat, data.lng]).addTo(map)
+            .bindPopup(`<b>${data.name}</b><br>Slug: ${data.slug}<br>Prov: ${data.codice_provincia_istat}`);
+    });
+</script>
+<a href="/" class="btn btn-primary mt-3">Home</a>
+{% endblock %}

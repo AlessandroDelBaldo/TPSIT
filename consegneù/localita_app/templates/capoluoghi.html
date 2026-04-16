@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Capoluoghi{% endblock %}
+{% block content %}
+<h1>Capoluoghi di Provincia e Regione</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Slug</th>
+            <th>Codice Prov</th>
+            <th>Cap Prov</th>
+            <th>Cap Reg</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ 'Sì' if row[8] else '' }}</td>
+            <td>{{ 'Sì' if row[9] else '' }}</td>
+            <td><a href="/map/{{ row[0] }}" class="btn btn-sm btn-info">Mappa</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/" class="btn btn-primary">Home</a>
+{% endblock %}
+

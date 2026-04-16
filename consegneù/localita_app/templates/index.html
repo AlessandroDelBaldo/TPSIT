@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Database Località Italiane</h1>
+        <p>~{{ total }} comuni italiani caricati da localita.sql.</p>
+        <div class="card">
+            <div class="card-body">
+                <h5>Ricerca rapida</h5>
+                <form action="/search" method="GET">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="q" placeholder="Nome comune o slug...">
+                        <button class="btn btn-primary" type="submit">Cerca</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Statistiche</h5>
+                <ul class="list-unstyled">
+                    <li><strong>{{ total }}</strong> comuni totali</li>
+                    <li><strong>{{ cap_prov }}</strong> capoluoghi di provincia</li>
+                </ul>
+                <a href="/capoluoghi" class="btn btn-success w-100">Vedi capoluoghi</a>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5>Esempi</h5>
+                <a href="/provincia/001" class="btn btn-outline-primary btn-sm me-1">Torino (001)</a>
+                <a href="/provincia/015" class="btn btn-outline-primary btn-sm me-1">Milano (015)</a>
+                <a href="/provincia/080" class="btn btn-outline-primary btn-sm">Roma (080)</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col">
+        <div class="alert alert-info">
+            <strong>Setup:</strong> Run <code>python db.py</code> to import data, then <code>python run.py</code>.
+        </div>
+    </div>
+</div>
+{% endblock %}
+

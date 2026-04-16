@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Risultati ricerca - {{ q }}{% endblock %}
+{% block content %}
+<h1>Risultati per "{{ q }}"</h1>
+{% if results %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Slug</th>
+            <th>Provincia</th>
+            <th>Cap. Prov?</th>
+            <th>Lat/Lng</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ 'Sì' if row[8] else 'No' }}</td>
+            <td>{{ row[3] }}, {{ row[4] }}</td>
+            <td>
+                <a href="/map/{{ row[0] }}" class="btn btn-sm btn-info">Mappa</a>
+                <a href="/provincia/{{ row[5] }}" class="btn btn-sm btn-secondary">Provincia</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="alert alert-warning">Nessun risultato per "{{ q }}". <a href="/">Torna home</a></p>
+{% endif %}
+<a href="/" class="btn btn-primary">Home</a>
+{% endblock %}
+
