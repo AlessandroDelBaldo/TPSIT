@@ -46,7 +46,7 @@ def init_db():
             # Multi-line VALUES
             continue
     
-    c.executemany('INSERT OR REPLACE INTO comuni VALUES (?,?,?,?,?,?,?,?,?)', values)
+    c.executemany('INSERT OR REPLACE INTO comuni VALUES (?,?,?,?,?,?,?,?,?,?)', values)
     conn.commit()
     conn.close()
     print(f"Imported {len(values)} comuni.")
