@@ -1,0 +1,31 @@
+[
+{"code": "A001",
+"brand": "Intel",
+"model": "I5",
+"price": 90},
+
+{"code": "A001",
+"brand": "Intel",
+"model": "17",
+"price": 190},
+
+{"code": "A001",
+"brand": "Intel",
+"model": "19",
+"price": 290},
+
+{"code": "A002",
+"brand": "Maxtor",
+"model": "SSD 100GB",
+"price": 90},
+
+{"code": "A002",
+"brand": "Maxtor",
+"model": "SSD 150GB",
+"price": 120},
+
+{"code": "A002",
+"brand": "Maxtor",
+"model": "SSD 200GB",
+"price": 150}
+]

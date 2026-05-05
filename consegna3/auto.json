@@ -1,0 +1,37 @@
+[
+    {
+        "marca": "Fiat",
+        "modello": "500",
+        "alimentazione": "benzina",
+        "colore": "rosso",
+        "url immagine" : "https://grecoauto.it/download/car/phpyMGudW.jpg"
+    },
+    {
+        "marca": "Audi",
+        "modello": "A3",
+        "alimentazione": "diesel",
+        "colore": "grigio",
+        "url immagine" : "https://cdn.motor1.com/images/mgl/Pbn7L/s1/copertina-audi-a3-la-nuova-generazione-solo-a-5-porte.webp"
+    },
+    {
+        "marca": "Ford",
+        "modello": "Focus",
+        "alimentazione": "benzina",
+        "colore": "nero",
+        "url immagine" : "https://media-assets.wired.it/photos/615f1ae2113e4c16bd78465b/4:3/w_944,h_708,c_limit/1483690484_Ford_RS-WIRED-1.jpg"
+    },
+    {
+        "marca": "Volkswagen",
+        "modello": "Golf",
+        "alimentazione": "diesel",
+        "colore": "bianco",
+        "url immagine" : "https://lh3.googleusercontent.com/proxy/yF-jIT3_6HQYmSpKPatVBFvrEwCUntvoRhTdfvzNo-hjbu12JKCKkpGIH8zjWGOmCxTx3DLjoqdVRVqTAXxEqysGUN6kcfQIWZP_Aw_4uKElUdBvD45-"
+    },
+    {
+        "marca": "Renault",
+        "modello": "Clio",
+        "alimentazione": "benzina",
+        "colore": "blu",
+        "url immagine" : "https://www.trevirent.it/cms/wp-content/uploads/2020/11/renault-clio-blu-800x450.jpg"
+    }
+]

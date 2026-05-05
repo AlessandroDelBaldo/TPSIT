@@ -1,0 +1,37 @@
+[
+    {
+        "brand": "Toyota",
+        "model": "Corolla",
+        "fuel_type": "Petrol",
+        "color": "Red",
+        "image_url": "https://example.com/images/toyota_corolla.jpg"
+    },
+    {
+        "brand": "Honda",
+        "model": "Civic",
+        "fuel_type": "Diesel",
+        "color": "Blue",
+        "image_url": "https://example.com/images/honda_civic.jpg"
+    },
+    {
+        "brand": "Ford",
+        "model": "Focus",
+        "fuel_type": "Petrol",
+        "color": "Black",
+        "image_url": "https://example.com/images/ford_focus.jpg"
+    },
+    {
+        "brand": "Chevrolet",
+        "model": "Malibu",
+        "fuel_type": "Petrol",
+        "color": "White",
+        "image_url": "https://example.com/images/chevrolet_malibu.jpg"
+    },
+    {
+        "brand": "Nissan",
+        "model": "Altima",
+        "fuel_type": "Hybrid",
+        "color": "Silver",
+        "image_url": "https://example.com/images/nissan_altima.jpg"
+    }
+]

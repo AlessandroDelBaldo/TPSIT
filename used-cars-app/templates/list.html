@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Cars Request</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <h1>Request Used Cars</h1>
+    <form id="car-request-form">
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" required>
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required>
+
+        <label for="fuel">Fuel Type:</label>
+        <select id="fuel" name="fuel" required>
+            <option value="">Select Fuel Type</option>
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+            <option value="electric">Electric</option>
+            <option value="hybrid">Hybrid</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <table id="results-table">
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Fuel Type</th>
+                <th>Color</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results will be populated here -->
+        </tbody>
+    </table>
+</body>
+</html>

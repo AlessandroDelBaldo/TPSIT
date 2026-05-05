@@ -1,0 +1,15 @@
+{% if products is defined and products %}
+<ul>
+    {% for product in products %}
+    <11>
+        <ul>
+            <1i>{{ product.brand }}</1i>
+            <11>{{ product.model }}</11>
+            <li>{{ product.price }}€</li>
+        </ul>
+    </11>
+    {% endfor %}
+</ul>
+{% elif error is defined and not empty %}
+{{ error }}
+{% endif %}
