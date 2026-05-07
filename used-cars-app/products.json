@@ -4,34 +4,34 @@
         "model": "Corolla",
         "fuel_type": "Petrol",
         "color": "Red",
-        "image_url": "https://example.com/images/toyota_corolla.jpg"
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/2019_Toyota_Corolla_hatchback_%28facelift%2C_red%29%2C_front_8.21.19.jpg/640px-2019_Toyota_Corolla_hatchback_%28facelift%2C_red%29%2C_front_8.21.19.jpg"
     },
     {
         "brand": "Honda",
         "model": "Civic",
         "fuel_type": "Diesel",
         "color": "Blue",
-        "image_url": "https://example.com/images/honda_civic.jpg"
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/2022_Honda_Civic_Sport_sedan_%28US%29%2C_front_8.10.21.jpg/640px-2022_Honda_Civic_Sport_sedan_%28US%29%2C_front_8.10.21.jpg"
     },
     {
         "brand": "Ford",
         "model": "Focus",
         "fuel_type": "Petrol",
         "color": "Black",
-        "image_url": "https://example.com/images/ford_focus.jpg"
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/2015_Ford_Focus_SE%2C_front_9.28.19.jpg/640px-2015_Ford_Focus_SE%2C_front_9.28.19.jpg"
     },
     {
         "brand": "Chevrolet",
         "model": "Malibu",
         "fuel_type": "Petrol",
         "color": "White",
-        "image_url": "https://example.com/images/chevrolet_malibu.jpg"
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/2019_Chevrolet_Malibu_LT%2C_front_10.4.19.jpg/640px-2019_Chevrolet_Malibu_LT%2C_front_10.4.19.jpg"
     },
     {
         "brand": "Nissan",
         "model": "Altima",
         "fuel_type": "Hybrid",
         "color": "Silver",
-        "image_url": "https://example.com/images/nissan_altima.jpg"
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/2019_Nissan_Altima_SR_AWD%2C_front_10.17.19.jpg/640px-2019_Nissan_Altima_SR_AWD%2C_front_10.17.19.jpg"
     }
 ]

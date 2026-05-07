@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 import json
+import os
 
 app = Flask(__name__)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/')
 def index():
@@ -15,7 +18,7 @@ def get_cars():
     fuel_type = data.get('fuel_type', '').lower()
     color = data.get('color', '').lower()
 
-    with open('products.json') as f:
+    with open(os.path.join(BASE_DIR, 'products.json')) as f:
         cars = json.load(f)
 
     filtered_cars = [
