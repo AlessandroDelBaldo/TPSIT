@@ -32,4 +32,4 @@ def get_cars():
     return jsonify(filtered_cars)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=6969)
+    app.run(debug=True, port=7000)

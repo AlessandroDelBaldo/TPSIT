@@ -1,3 +1,2 @@
-Flask
-flask-cors
-jsonschema
+Flask==2.2.5
+Werkzeug==2.2.3

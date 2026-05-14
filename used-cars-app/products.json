@@ -1,37 +1,107 @@
 [
     {
-        "brand": "Toyota",
-        "model": "Corolla",
-        "fuel_type": "Petrol",
-        "color": "Red",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/2019_Toyota_Corolla_hatchback_%28facelift%2C_red%29%2C_front_8.21.19.jpg/640px-2019_Toyota_Corolla_hatchback_%28facelift%2C_red%29%2C_front_8.21.19.jpg"
+        "brand": "Fiat",
+        "model": "500",
+        "fuel_type": "benzina",
+        "color": "rosso",
+        "image_url": "https://placehold.co/220x130/e74c3c/ffffff?text=Fiat+500"
     },
     {
-        "brand": "Honda",
-        "model": "Civic",
-        "fuel_type": "Diesel",
-        "color": "Blue",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/2022_Honda_Civic_Sport_sedan_%28US%29%2C_front_8.10.21.jpg/640px-2022_Honda_Civic_Sport_sedan_%28US%29%2C_front_8.10.21.jpg"
+        "brand": "Fiat",
+        "model": "Panda",
+        "fuel_type": "diesel",
+        "color": "bianco",
+        "image_url": "https://placehold.co/220x130/ecf0f1/555555?text=Fiat+Panda"
+    },
+    {
+        "brand": "Fiat",
+        "model": "Tipo",
+        "fuel_type": "diesel",
+        "color": "grigio",
+        "image_url": "https://placehold.co/220x130/95a5a6/ffffff?text=Fiat+Tipo"
+    },
+    {
+        "brand": "Ford",
+        "model": "Fiesta",
+        "fuel_type": "benzina",
+        "color": "blu",
+        "image_url": "https://placehold.co/220x130/2980b9/ffffff?text=Ford+Fiesta"
     },
     {
         "brand": "Ford",
         "model": "Focus",
-        "fuel_type": "Petrol",
-        "color": "Black",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/2015_Ford_Focus_SE%2C_front_9.28.19.jpg/640px-2015_Ford_Focus_SE%2C_front_9.28.19.jpg"
+        "fuel_type": "diesel",
+        "color": "nero",
+        "image_url": "https://placehold.co/220x130/2c3e50/ffffff?text=Ford+Focus"
     },
     {
-        "brand": "Chevrolet",
-        "model": "Malibu",
-        "fuel_type": "Petrol",
-        "color": "White",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/2019_Chevrolet_Malibu_LT%2C_front_10.4.19.jpg/640px-2019_Chevrolet_Malibu_LT%2C_front_10.4.19.jpg"
+        "brand": "Ford",
+        "model": "Puma",
+        "fuel_type": "hybrid",
+        "color": "rosso",
+        "image_url": "https://placehold.co/220x130/c0392b/ffffff?text=Ford+Puma"
     },
     {
-        "brand": "Nissan",
-        "model": "Altima",
-        "fuel_type": "Hybrid",
-        "color": "Silver",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/2019_Nissan_Altima_SR_AWD%2C_front_10.17.19.jpg/640px-2019_Nissan_Altima_SR_AWD%2C_front_10.17.19.jpg"
+        "brand": "Audi",
+        "model": "A1",
+        "fuel_type": "benzina",
+        "color": "bianco",
+        "image_url": "https://placehold.co/220x130/dfe6e9/333333?text=Audi+A1"
+    },
+    {
+        "brand": "Audi",
+        "model": "A3",
+        "fuel_type": "diesel",
+        "color": "grigio",
+        "image_url": "https://placehold.co/220x130/7f8c8d/ffffff?text=Audi+A3"
+    },
+    {
+        "brand": "Audi",
+        "model": "Q3",
+        "fuel_type": "benzina",
+        "color": "nero",
+        "image_url": "https://placehold.co/220x130/1a1a2e/ffffff?text=Audi+Q3"
+    },
+    {
+        "brand": "Volkswagen",
+        "model": "Golf",
+        "fuel_type": "benzina",
+        "color": "verde",
+        "image_url": "https://placehold.co/220x130/27ae60/ffffff?text=VW+Golf"
+    },
+    {
+        "brand": "Volkswagen",
+        "model": "Polo",
+        "fuel_type": "diesel",
+        "color": "bianco",
+        "image_url": "https://placehold.co/220x130/f5f6fa/555555?text=VW+Polo"
+    },
+    {
+        "brand": "BMW",
+        "model": "Serie 1",
+        "fuel_type": "diesel",
+        "color": "nero",
+        "image_url": "https://placehold.co/220x130/212121/ffffff?text=BMW+Serie+1"
+    },
+    {
+        "brand": "Toyota",
+        "model": "Yaris",
+        "fuel_type": "hybrid",
+        "color": "rosso",
+        "image_url": "https://placehold.co/220x130/e74c3c/ffffff?text=Toyota+Yaris"
+    },
+    {
+        "brand": "Renault",
+        "model": "Clio",
+        "fuel_type": "benzina",
+        "color": "giallo",
+        "image_url": "https://placehold.co/220x130/f1c40f/333333?text=Renault+Clio"
+    },
+    {
+        "brand": "Peugeot",
+        "model": "208",
+        "fuel_type": "diesel",
+        "color": "blu",
+        "image_url": "https://placehold.co/220x130/3498db/ffffff?text=Peugeot+208"
     }
 ]
