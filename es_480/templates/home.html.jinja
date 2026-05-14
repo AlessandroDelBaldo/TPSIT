@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COUNTRIES SOAP SERVICES</title>
+        <style>
+            body { font-family: sans-serif; max-width: 900px; margin: 30px auto; padding: 0 20px; }
+            table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+            th, td { border: 1px solid #ccc; padding: 6px 12px; text-align: left; }
+            th { background: #f0f0f0; }
+            .response { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 16px; border-radius: 6px; margin-top: 10px; }
+            .error { color: red; }
+            select, input[type=text] { padding: 6px; margin-right: 6px; }
+            button { padding: 6px 14px; }
+            a { display: inline-block; margin-top: 16px; }
+        </style>
+    </head>
+    <body>
+        <h1>COUNTRIES SOAP SERVICES</h1>
+
+        {% if response is not none or result %}
+        <h2>Risultato: {{ service_used }} per "{{ isocode }}"</h2>
+        <div class="response">
+            {% if result %}
+                <p class="error">{{ result }}</p>
+            {% elif service_used == "FullCountryInfo" and response %}
+                <table>
+                    <tr><th>Campo</th><th>Valore</th></tr>
+                    <tr><td>ISO Code</td><td>{{ response.sISOCode }}</td></tr>
+                    <tr><td>Nome</td><td>{{ response.sName }}</td></tr>
+                    <tr><td>Capitale</td><td>{{ response.sCapitalCity }}</td></tr>
+                    <tr><td>Prefisso telefonico</td><td>{{ response.sPhoneCode }}</td></tr>
+                    <tr><td>Continente</td><td>{{ response.sContinentCode }}</td></tr>
+                    <tr><td>Valuta</td><td>{{ response.sCurrencyISOCode }}</td></tr>
+                    <tr><td>Dominio internet</td><td>{{ response.sCountryFlag }}</td></tr>
+                    <tr><td>Lingue</td><td>
+                        {% if response.Languages and response.Languages.tLanguage %}
+                            {% for lang in response.Languages.tLanguage %}
+                                {{ lang.sISOCode }} - {{ lang.sName }};
+                            {% endfor %}
+                        {% endif %}
+                    </td></tr>
+                </table>
+            {% else %}
+                <p><strong>{{ response }}</strong></p>
+            {% endif %}
+        </div>
+        <a href="/">&#8592; Torna alla lista</a>
+
+        {% else %}
+        <h2>Effettua una richiesta</h2>
+        <form method="POST">
+            <label for="isocode">Codice ISO:</label>
+            <input type="text" name="isocode" id="isocode" placeholder="es. IT" maxlength="4" />
+            <label for="service">Servizio:</label>
+            <select name="service" id="service">
+                <option value="CapitalCity">CapitalCity</option>
+                <option value="CountryIntPhoneCode">CountryIntPhoneCode</option>
+                <option value="FullCountryInfo">FullCountryInfo</option>
+            </select>
+            <button type="submit">Invia</button>
+        </form>
+
+        {% if countries %}
+        <h3>Codici ISO disponibili</h3>
+        <table>
+            <tr><th>ISO Code</th><th>Paese</th></tr>
+            {% for country in countries %}
+            <tr>
+                <td>{{ country.sISOCode }}</td>
+                <td>{{ country.sName }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+        {% endif %}
+    </body>
+</html>

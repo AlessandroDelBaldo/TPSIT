@@ -1,0 +1,8 @@
+Crea una applicazione Web client-server in cui si possa interrogare un database che contiene informazioni sulle nazioni tramite una serie di servizi messi a disposizione.
+In dettaglio la pagina deve consentire di inserire un ISO code preso da una lista di quelli disponibili mostrata in pagina invocando il servizio:
+- ListOfCountryNamesByCode
+
+e deve restituire un risultato invocando uno dei seguenti servizi (ma implementare il possibile utilizzo di tutti e 3!):
+- CapitalCity
+- CountryIntPhoneCode
+- FullCountryInfo
