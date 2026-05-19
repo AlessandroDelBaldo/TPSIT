@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "PowerShell(if \\(-not $?\\) { \"Directory non esiste\" })",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Utente\\\\TPSIT\\\\web_REST_python\\\\templates\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Utente\\\\TPSIT\\\\web_REST_python\\\\static\")",
+      "PowerShell(\"OK\")"
     ]
   }
 }

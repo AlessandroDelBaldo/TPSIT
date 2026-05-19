@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionale Utenti</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Gestionale Utenti</h1>
+
+  <!-- Lista utenti -->
+  <section id="sezione-lista">
+    <h2>Lista Utenti</h2>
+    <button onclick="caricaUtenti()">Aggiorna lista</button>
+    <div id="messaggio-lista"></div>
+    <table id="tabella-utenti">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Data di Nascita</th>
+          <th>Mansione</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabella">
+        <tr><td colspan="6">Caricamento...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Dettaglio utente -->
+  <section id="sezione-dettaglio" style="display:none;">
+    <h2>Dettaglio Utente</h2>
+    <button onclick="nascondiDettaglio()">Torna alla lista</button>
+    <div id="dettaglio-contenuto"></div>
+  </section>
+
+  <!-- Form inserimento nuovo utente -->
+  <section id="sezione-inserimento">
+    <h2>Inserisci Nuovo Utente</h2>
+    <form id="form-inserimento" onsubmit="inserisciUtente(event)">
+      <div class="campo">
+        <label for="ins-nome">Nome:</label>
+        <input type="text" id="ins-nome" placeholder="Es. Mario" required>
+      </div>
+      <div class="campo">
+        <label for="ins-cognome">Cognome:</label>
+        <input type="text" id="ins-cognome" placeholder="Es. Rossi" required>
+      </div>
+      <div class="campo">
+        <label for="ins-data">Data di Nascita:</label>
+        <input type="date" id="ins-data" required>
+      </div>
+      <div class="campo">
+        <label for="ins-mansione">Mansione:</label>
+        <input type="text" id="ins-mansione" placeholder="Es. Sviluppatore" required>
+      </div>
+      <div id="errori-inserimento" class="errori"></div>
+      <button type="submit">Inserisci</button>
+    </form>
+    <div id="messaggio-inserimento"></div>
+  </section>
+
+  <!-- Form modifica utente -->
+  <section id="sezione-modifica" style="display:none;">
+    <h2>Modifica Utente <span id="modifica-id-titolo"></span></h2>
+    <button onclick="nascondiModifica()">Annulla</button>
+    <form id="form-modifica" onsubmit="modificaUtente(event)">
+      <input type="hidden" id="mod-id">
+      <div class="campo">
+        <label for="mod-nome">Nome:</label>
+        <input type="text" id="mod-nome" required>
+      </div>
+      <div class="campo">
+        <label for="mod-cognome">Cognome:</label>
+        <input type="text" id="mod-cognome" required>
+      </div>
+      <div class="campo">
+        <label for="mod-data">Data di Nascita:</label>
+        <input type="date" id="mod-data" required>
+      </div>
+      <div class="campo">
+        <label for="mod-mansione">Mansione:</label>
+        <input type="text" id="mod-mansione" required>
+      </div>
+      <div id="errori-modifica" class="errori"></div>
+      <button type="submit">Salva modifiche</button>
+    </form>
+    <div id="messaggio-modifica"></div>
+  </section>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

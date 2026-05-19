@@ -1,0 +1,31 @@
+Realizzare una applicazione web CRUD per la gestione di utenti:
+lista utenti (ID, nome, cognome, data di nascita, mansione) con pulsanti "dettaglio" e "elimina" di fianco ad ognuno di essi
+form inserimento nuovo utente
+form modifica utente esistente
+l’interfaccia grafica può essere semplice, mi interessa la sostanza!
+La pagina sarà raggiungibile da http://localhost:5000/gestionale_utenti/
+I dati andranno memorizzati in un unico file JSON (es. users.json), le richieste lato client saranno serializzate e deserializzate in JSON.
+Cosa dovrai utilizzare:
+Python
+Flask
+HTML
+espressioni regolari (per validare i dati inseriti nelle form e per gli endpoint REST)
+gestione dei metodi HTTP
+AJAX
+Web service REST
+L’applicazione dovrà permettere:
+visualizzazione lista utenti => GET users/
+visualizzazione dettaglio utente => GET users/<id>
+inserimento nuovo utente => POST users/
+modifica utente => PUT users/<id>
+eliminazione utente => DELETE users/<id>
+Ogni chiamata restituirà il codice di stato HTTP opportuno:
+200 OK
+201 Creato
+400 Richiesta errata
+404 Risorsa non trovata
+405 Metodo non consentito
+
+Tutte le richieste lato server saranno gestite dal solo file app.py che funzionerà come front controller, nello specifico potrete usare request.method per determinare GET, POST, PUT o DELETE nelle rotte condivise.
+
+Le richieste CRUD vanno implementate sul client tramite AJAX e JavaScript ECMAScript 5, sul server il contenuto di tali richieste va letto tramite request.args (per GET) e request.get_json() (per POST, PUT ed eventualmente DELETE).

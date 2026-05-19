@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nome": "Mario",
+    "cognome": "Rossi",
+    "data_nascita": "1990-03-15",
+    "mansione": "Sviluppatore"
+  },
+  {
+    "id": 2,
+    "nome": "Laura",
+    "cognome": "Bianchi",
+    "data_nascita": "1985-07-22",
+    "mansione": "Designer"
+  },
+  {
+    "id": 3,
+    "nome": "Giovanni",
+    "cognome": "Verdi",
+    "data_nascita": "1995-11-08",
+    "mansione": "Analista"
+  }
+]
